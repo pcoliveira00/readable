@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "add": "^2.0.6",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "prop-types": "^15.6.0",
+    "random-string": "^0.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "redux": "^3.7.2"
+    "react-time": "^4.3.0",
+    "react-timestamp": "^4.3.1",
+    "redux": "^3.7.2",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case LOAD_POSTS:
       return {
         ...state,
-        posts: action.data,
+        posts: action.posts,
       };
     case LOAD_POST:
       return {

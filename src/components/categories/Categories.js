@@ -2,21 +2,26 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { loadCategories } from './actions';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Card } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
 class Categories extends Component {
   render() {
-
-    const {categories} = this.props.categories;
+    const { categories } = this.props.categories;
     return (
-      <div>
-        <p>Categories</p>
-        <ul>
-          {categories.map(category =>
-              <Link to={category.name}><li key={category.name}>{category.name}</li></Link>)}
-        </ul>
-      </div>
-    );
+        <div>
+        <p>Categories: </p>
+      <Card.Group>
+        {categories.map(category => (
+            <Card centered>
+              <Card.Content>
+                <Card.Header>{category.name}</Card.Header>
+              </Card.Content>
+            </Card>),
+        )}
+      </Card.Group>
+        </div>);
   }
 }
 

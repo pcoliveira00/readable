@@ -1,7 +1,7 @@
 export const LOAD_POSTS = 'LOAD_POSTS';
 export const LOAD_POST = 'LOAD_POSTS';
 export const ADD_POST = 'ADD_POST';
-export const UPDATE_POST = 'EDIT_POST';
+export const UPDATE_POST = 'UPDATE_POST';
 export const REMOVE_POST = 'REMOVE_POST';
 
 export function loadPosts(posts) {

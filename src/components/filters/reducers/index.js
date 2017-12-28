@@ -1,29 +1,21 @@
-import {ADD_FILTER, LOAD_FILTER, REMOVE_FILTER} from '../actions';
+import { SET_FILTER, LOAD_FILTER } from '../actions';
 
 const initialState = {
-  filters: [],
+  filter: 'voteScore',
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case SET_FILTER:
+      return {
+        ...state,
+        filter: action.filter,
+      };
     case LOAD_FILTER:
       return {
         ...state,
-        filters: action.data,
-      };
-    case ADD_FILTER:
-      return {
-        ...state,
-        filters: state.filters.add(action.data),
-      };
-    case REMOVE_FILTER:
-      return {
-        ...state,
-        filters: state.filters.filter((filter) => {
-          return (filter.name !== action.data.name ? filter : null);
-        }),
       };
     default:
       return state;
   }
-}
+};
